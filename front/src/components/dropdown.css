@@ -1,0 +1,158 @@
+/* Basic styling for the dropdown container */
+.material {
+    display: flex; /* Using flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically center items */
+    margin: 20px;
+}
+
+/* Container for dropdowns */
+.dropdown-container {
+    display: flex; /* Using flexbox to position dropdowns side by side */
+    flex-direction: column; /* Stack the dropdowns vertically */
+    margin-right: 0px; /* Add space between dropdowns and text */
+    margin-left: 40px;
+}
+
+/* Add space between dropdown buttons */
+.dropdown-btn + .dropdown-btn {
+    margin-top: 10px; /* Adds space between consecutive dropdown buttons */
+}
+
+/* Styling for the dropdown buttons */
+.dropdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    width: 600px; /* Default width for larger screens */
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+/* Change background color on hover */
+.dropdown-btn:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the dropdown arrow */
+.dropdown-arrow {
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+/* When the dropdown is open, rotate the arrow */
+.dropdown-btn.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Styling for the dropdown content */
+.dropdown-content {
+    padding: 10px;
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 100px;
+    border-radius: 5px;
+    border: 1px solid #e6e5e5;
+    width: 600px; /* Default width for larger screens */
+}
+
+/* Animation for text container */
+.dropdown-text-container {
+    flex-grow: 1; /* Make it take the remaining space */
+    padding-left: 20px; /* Space between the dropdown and text */
+    text-align: right; /* Align text to the right */
+    font-size: 6px;
+    color: #333; /* Adjust text color */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100px); /* Move further to the right */
+    animation: fadeInRight 1s forwards; /* Apply animation */
+}
+.rec{
+    width:100px;
+}
+
+/* Define the animation for the text container */
+@keyframes fadeInRight {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateX(0); /* Move to normal position */
+    }
+}
+
+/* Make the Sketchfab embed responsive */
+.sketchfab-embed-wrapper {
+    width: 100%;
+    max-width: 800px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the iframe */
+    margin-left: 140px;
+}
+
+.sketchfab-embed-wrapper iframe {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+}
+
+/* Media Queries for responsiveness */
+
+/* For screens smaller than 768px (tablets and below) */
+@media (max-width: 768px) {
+    .dropdown-btn {
+        width: 100%; /* Full width for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .dropdown-content {
+        width: 100%; /* Make the dropdown content take full width */
+    }
+
+    .dropdown-text-container {
+        text-align: center; /* Center-align the text for smaller screens */
+        padding-left: 0; /* Remove extra padding */
+        margin-top: 10px; /* Add space between the dropdown and the text */
+        transform: translateX(0); /* Remove initial right-side shift */
+        animation: fadeInUp 1s forwards; /* Change animation direction to "fadeInUp" */
+    }
+
+    .dropdown-container {
+        flex-direction: column; /* Stack dropdowns vertically on smaller screens */
+        margin-left: 0; /* Remove margin on the left for smaller screens */
+    }
+}
+
+/* For screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+    .dropdown-btn {
+        width: 100%; /* Full width on mobile */
+        font-size: 14px; /* Adjust font size for better readability on mobile */
+        padding: 8px; /* Adjust padding to fit smaller screen */
+    }
+
+    .dropdown-content {
+        width: 100%; /* Full width dropdown content on mobile */
+    }
+
+    .dropdown-text-container {
+        text-align: center; /* Center-align the text for mobile screens */
+        padding-left: 0; /* Remove extra padding for smaller screens */
+        margin-top: 10px; /* Add margin between dropdown and text */
+        animation: fadeInUp 1s forwards; /* Change animation to "fadeInUp" */
+    }
+}
+
+/* New animation for mobile and tablet screens (for smooth fade-in effect) */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

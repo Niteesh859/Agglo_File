@@ -1,0 +1,189 @@
+/* Default styles (already in your CSS) */
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff9900;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+  
+  /* Chatbot Container */
+  .chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    width: 300px;
+    height: 400px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .chatbot-container.open {
+    display: flex;
+  }
+  
+  .chatbot-header {
+    background-color: #1e1e1e;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  .chatbot-toggle {
+    background-color: #ff9900;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .chatbot-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+  }
+  
+  .chatbot-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  
+  .chatbot-message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    max-width: 80%;
+  }
+  
+  .chatbot-message.user {
+    background-color: #ff9900;
+    align-self: flex-end;
+  }
+  
+  .chatbot-message.bot {
+    background-color: #555;
+    align-self: flex-start;
+  }
+  
+  .chatbot-input {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chatbot-input input {
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+  }
+  
+  .chatbot-input button {
+    background-color: #ff9900;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Styles */
+  
+  /* For screens smaller than 768px (tablets and mobile devices) */
+  @media (max-width: 768px) {
+    .chatbot-container {
+      width: 250px;
+      height: 350px;
+    }
+  
+    .chatbot-icon {
+      padding: 12px;
+    }
+  
+    .chatbot-header {
+      padding: 8px;
+    }
+  
+    .chatbot-input input {
+      width: 70%;
+    }
+  
+    .chatbot-input button {
+      padding: 6px 12px;
+    }
+  
+    .chatbot-message {
+      font-size: 14px;
+      padding: 6px;
+    }
+  
+    .chatbot-message.user {
+      max-width: 75%;
+    }
+  
+    .chatbot-message.bot {
+      max-width: 75%;
+    }
+  }
+  
+  /* For screens smaller than 480px (small mobile devices) */
+  @media (max-width: 480px) {
+    .chatbot-container {
+      width: 200px;
+      height: 300px;
+    }
+  
+    .chatbot-icon {
+      padding: 10px;
+    }
+  
+    .chatbot-header {
+      font-size: 14px;
+      padding: 6px;
+    }
+  
+    .chatbot-toggle {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  
+    .chatbot-input input {
+      width: 60%;
+    }
+  
+    .chatbot-input button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  
+    .chatbot-message {
+      font-size: 13px;
+      padding: 5px;
+    }
+  
+    .chatbot-message.user {
+      max-width: 70%;
+    }
+  
+    .chatbot-message.bot {
+      max-width: 70%;
+    }
+  }
+  

@@ -1,0 +1,144 @@
+/* General form styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Label styles */
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #06074e;
+  border-width: 3px;
+  box-shadow: 0 0 15px rgba(79, 127, 221, 0.5);
+}
+
+/* Small text beneath input fields */
+.form-text {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Radio button styles */
+.custom-control {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.custom-control-label {
+  font-size: 14px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Questions section */
+.questions p {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.questions .form-group {
+  margin-bottom: 15px;
+}
+
+/* Checkbox styles */
+.form-check {
+  margin-bottom: 20px;
+}
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+.form-check-label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Submit button styles */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  button[type="submit"] {
+    font-size: 14px;
+  }
+
+  .questions p {
+    font-size: 14px;
+  }
+}
+
+/* Additional styles for the new myopia questions */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Custom radio button styles for the myopia questions */
+.custom-control-inline {
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.custom-control-label::before {
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.custom-control-label {
+  font-size: 14px;
+  cursor: pointer;
+}

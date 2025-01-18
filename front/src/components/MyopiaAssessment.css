@@ -1,0 +1,209 @@
+/* src/components/MyopiaAssessment.css */
+a{
+    width: 100vw;
+}
+/* General Styles */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #f4f4f4;
+    padding: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  .p-4 space-y-4{
+    margin-left: -400px;
+  }
+  .card-content {
+    padding: 16px;
+  }
+  
+  /* Tabs Navigation */
+  .tabs-list {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .tabs-trigger {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .tabs-trigger:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .tabs-trigger.active {
+    border-bottom: 2px solid #4CAF50;
+    font-weight: 600;
+  }
+  
+  .tabs-content {
+    display: none;
+  }
+  
+  .tabs-content.active {
+    display: block;
+  }
+  
+  /* Responsive Design for smaller devices */
+  @media (max-width: 768px) {
+    .card {
+      margin: 10px;
+    }
+  
+    .card-title {
+      font-size: 20px;
+    }
+  
+    .tabs-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tabs-trigger {
+      padding: 12px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .tabs-trigger.active {
+      border-bottom: 2px solid #4CAF50;
+    }
+  
+    .tabs-content {
+      margin-top: 16px;
+    }
+  }
+  
+  /* For the Vision Tests */
+  .vision-test {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .vision-test h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .vision-test .text-center {
+    text-align: center;
+  }
+  
+  .vision-test p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .vision-test .slider {
+    margin: 10px 0;
+  }
+  
+  .vision-test .slider input {
+    width: 100%;
+  }
+  
+  .vision-test .slider p {
+    font-size: 16px;
+  }
+  
+  .vision-test .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .vision-test .button-group button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  /* For Lifestyle Form */
+  .lifestyle-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .lifestyle-form label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .lifestyle-form input[type="number"],
+  .lifestyle-form input[type="checkbox"] {
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  
+  .lifestyle-form .input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .lifestyle-form .slider {
+    width: 100%;
+  }
+  
+  .lifestyle-form .input-wrapper input {
+    width: 60px;
+  }
+  
+  /* Ensure good posture checkbox has adequate space */
+  .lifestyle-form .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* For small devices (mobiles) */
+  @media (max-width: 480px) {
+    .card-title {
+      font-size: 18px;
+    }
+  
+    .tabs-trigger {
+      font-size: 14px;
+      padding: 12px 0;
+    }
+  
+    .vision-test h3,
+    .lifestyle-form label {
+      font-size: 18px;
+    }
+  
+    .vision-test .text-center p {
+      font-size: 14px;
+    }
+  
+    .lifestyle-form input[type="number"],
+    .lifestyle-form input[type="checkbox"] {
+      font-size: 14px;
+    }
+    
+    .slider input {
+      width: 100%;
+    }
+  
+    .lifestyle-form .input-wrapper {
+      flex-direction: column;
+    }
+  }
+  

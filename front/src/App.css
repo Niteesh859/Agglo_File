@@ -1,0 +1,43 @@
+
+/* Set the background color of the entire webpage to black */
+body {
+  background-color: black;
+  margin: 0; /* Remove default margin */
+  margin-top: 0px;
+  font-family: Arial, sans-serif; /* Optional: you can use any font */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%; /* Make sure the body takes up the full height of the viewport */
+  overflow-x: hidden;
+}
+#root{
+  margin-top: -110px;
+  margin-left: 0px;
+}
+/* Center the content in the App component */
+.App {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0px; /* Optional: to add some space at the top */
+}
+.dropdown-container{
+  margin-left: 500px;
+  
+  text-align: center;
+}
+.list-group{
+  margin-left: 500px;
+}
+.feedback-list mt-5{
+  margin-left: 120px;
+}
+.text-center{
+  margin-top: 30px;
+  width: 700px;
+  margin-left: 300px;
+}

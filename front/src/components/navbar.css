@@ -1,0 +1,116 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    width: 100vw;
+    position: sticky; /* Fixed to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.navbar-name {
+    margin-left: -1100px; /* Remove the margin shift */
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+}
+
+.navbar-logo .logo {
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    background-color: white;
+    border-width: 2px;
+    border-radius: 100%;
+    border-color: white;
+    margin-left: 30px;
+}
+
+/* Navbar links container */
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+}
+
+.navbar-links li {
+    margin: 0 15px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #4CAF50;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (tablets and below) */
+@media screen and (max-width: 768px) {
+    /* Hide the navbar links by default on small screens */
+    .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Display navbar links when the 'active' class is added */
+    .navbar-links.active {
+        display: flex;
+    }
+
+    /* Add toggle button for small screens */
+    .navbar-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .navbar-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+    }
+
+    /* Adjust the navbar name and logo for smaller screens */
+    .navbar-name {
+        font-size: 20px; /* Smaller font size for small screens */
+        margin-left: 10px;
+    }
+
+    .navbar-logo .logo {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Optional: For screens smaller than 480px (mobile devices) */
+@media screen and (max-width: 480px) {
+    .navbar-name {
+        font-size: 18px; /* Even smaller font size for very small screens */
+    }
+
+    .navbar-logo .logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Optional: Style the body to account for the fixed navbar */
+body {
+    margin: 0;
+    padding-top: 60px; /* Adjust the padding so content is not hidden under the fixed navbar */
+}
